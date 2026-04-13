@@ -15,7 +15,7 @@ export function renderPage(main) {
     <section class="section" style="background:var(--bg)">
       <div class="container">
         <div class="editorial-block editorial-block--left reveal">
-          <div class="editorial-block__media"><img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=900&q=80&auto=format&fit=crop" alt="Corporate event catering" /></div>
+          <div class="editorial-block__media"><img src="/service-corporate.png" onerror="if(this.src!=='https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=900&q=80&auto=format&fit=crop')this.src='https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=900&q=80&auto=format&fit=crop'" alt="Corporate event catering" /></div>
           <div class="editorial-block__copy">
             <p class="label">Built for Business</p>
             <h2>Impress clients. Reward your team.</h2>

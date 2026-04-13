@@ -15,7 +15,7 @@ export function renderPage(main) {
     <section class="section" style="background:var(--bg)">
       <div class="container">
         <div class="editorial-block editorial-block--left reveal">
-          <div class="editorial-block__media"><img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=900&q=80&auto=format&fit=crop" alt="UK map nationwide service" /></div>
+          <div class="editorial-block__media"><img src="/service-delivery.png" onerror="if(this.src!=='https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=900&q=80&auto=format&fit=crop')this.src='https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=900&q=80&auto=format&fit=crop'" alt="UK map nationwide service" /></div>
           <div class="editorial-block__copy">
             <p class="label">UK-Wide Coverage</p>
             <h2>We go where your event takes us</h2>

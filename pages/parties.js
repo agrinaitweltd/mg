@@ -15,7 +15,7 @@ export function renderPage(main) {
     <section class="section" style="background:var(--bg)">
       <div class="container">
         <div class="editorial-block editorial-block--right reveal">
-          <div class="editorial-block__media"><img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=900&q=80&auto=format&fit=crop" alt="Private party catering" /></div>
+          <div class="editorial-block__media"><img src="/service-parties.png" onerror="if(this.src!=='https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=900&q=80&auto=format&fit=crop')this.src='https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=900&q=80&auto=format&fit=crop'" alt="Private party catering" /></div>
           <div class="editorial-block__copy">
             <p class="label">Your Celebration</p>
             <h2>Great food for milestone moments</h2>

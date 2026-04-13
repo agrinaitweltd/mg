@@ -21,7 +21,7 @@ function e(a){a.innerHTML=`
         <div class="cater-grid">
           <a href="/services/wedding" class="cater-card reveal">
             <div class="cater-card__img">
-              <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=900&q=80&auto=format&fit=crop" alt="Wedding catering" />
+              <img src="/events-wedding.png" onerror="if(this.src!=='https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=900&q=80&auto=format&fit=crop')this.src='https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=900&q=80&auto=format&fit=crop'" alt="Wedding catering" />
               <div class="cater-card__overlay"></div>
             </div>
             <div class="cater-card__body">
@@ -36,7 +36,7 @@ function e(a){a.innerHTML=`
           </a>
           <a href="/services/corporate" class="cater-card reveal">
             <div class="cater-card__img">
-              <img src="https://images.unsplash.com/photo-1531058020387-3be344556be6?w=900&q=80&auto=format&fit=crop" alt="Corporate event catering" />
+              <img src="/events-corporate.png" onerror="if(this.src!=='https://images.unsplash.com/photo-1531058020387-3be344556be6?w=900&q=80&auto=format&fit=crop')this.src='https://images.unsplash.com/photo-1531058020387-3be344556be6?w=900&q=80&auto=format&fit=crop'" alt="Corporate event catering" />
               <div class="cater-card__overlay"></div>
             </div>
             <div class="cater-card__body">
@@ -51,7 +51,7 @@ function e(a){a.innerHTML=`
           </a>
           <a href="/services/parties" class="cater-card reveal">
             <div class="cater-card__img">
-              <img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?w=900&q=80&auto=format&fit=crop" alt="Private party catering" />
+              <img src="/events-parties.png" onerror="if(this.src!=='https://images.unsplash.com/photo-1470337458703-46ad1756a187?w=900&q=80&auto=format&fit=crop')this.src='https://images.unsplash.com/photo-1470337458703-46ad1756a187?w=900&q=80&auto=format&fit=crop'" alt="Private party catering" />
               <div class="cater-card__overlay"></div>
             </div>
             <div class="cater-card__body">
@@ -66,7 +66,7 @@ function e(a){a.innerHTML=`
           </a>
           <a href="/services/festival" class="cater-card reveal">
             <div class="cater-card__img">
-              <img src="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?w=900&q=80&auto=format&fit=crop" alt="Festival catering" />
+              <img src="/events-festival.png" onerror="if(this.src!=='https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?w=900&q=80&auto=format&fit=crop')this.src='https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?w=900&q=80&auto=format&fit=crop'" alt="Festival catering" />
               <div class="cater-card__overlay"></div>
             </div>
             <div class="cater-card__body">
@@ -102,7 +102,7 @@ function e(a){a.innerHTML=`
     <section class="events-included" aria-label="What is included">
       <div class="container">
         <div class="included-split reveal">
-          <div class="included-split__media"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=900&q=80&auto=format&fit=crop" alt="Event service in action" /></div>
+          <div class="included-split__media"><img src="/events-service.png" onerror="if(this.src!=='https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=900&q=80&auto=format&fit=crop')this.src='https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=900&q=80&auto=format&fit=crop'" alt="Event service in action" /></div>
           <div>
             <p class="label">What Is Included</p>
             <h2>Everything handled end-to-end</h2>

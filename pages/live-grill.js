@@ -15,7 +15,7 @@ export function renderPage(main) {
     <section class="section" style="background:var(--bg)">
       <div class="container">
         <div class="editorial-block editorial-block--right reveal">
-          <div class="editorial-block__media"><img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=900&q=80&auto=format&fit=crop" alt="Live grill station" /></div>
+          <div class="editorial-block__media"><img src="/service-live-grill.png" onerror="if(this.src!=='https://images.unsplash.com/photo-1544025162-d76694265947?w=900&q=80&auto=format&fit=crop')this.src='https://images.unsplash.com/photo-1544025162-d76694265947?w=900&q=80&auto=format&fit=crop'" alt="Live grill station" /></div>
           <div class="editorial-block__copy">
             <p class="label">Show-stopping Experience</p>
             <h2>Food that becomes the centrepiece</h2>

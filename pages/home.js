@@ -28,7 +28,7 @@ export function renderPage(main) {
             </div>
           </div>
           <div class="home-hero__img reveal-scale">
-            <img src="https://images.unsplash.com/photo-1555244162-803834f70033?w=900&q=80&auto=format&fit=crop" alt="Catering setup" />
+            <img src="/hero-main.png" onerror="if(this.src!=='https://images.unsplash.com/photo-1555244162-803834f70033?w=900&q=80&auto=format&fit=crop')this.src='https://images.unsplash.com/photo-1555244162-803834f70033?w=900&q=80&auto=format&fit=crop'" alt="Catering setup" />
             <div class="home-hero__img-overlay"></div>
             <div class="home-hero__badge"><strong>500+</strong> Events catered</div>
             <div class="home-hero__frame"></div>
@@ -72,7 +72,7 @@ export function renderPage(main) {
       <div class="container">
         <div class="home-why__grid">
           <div class="home-why__img reveal">
-            <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=900&q=80&auto=format&fit=crop" alt="Chef plating food" />
+            <img src="/about-kitchen.png" onerror="if(this.src!=='https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=900&q=80&auto=format&fit=crop')this.src='https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=900&q=80&auto=format&fit=crop'" alt="Chef plating food" />
             <div class="home-why__stat"><strong>98%</strong><span>Repeat bookings</span></div>
           </div>
           <div class="home-why__copy reveal">
@@ -107,11 +107,11 @@ export function renderPage(main) {
           <h2>Our most-loved dishes</h2>
         </div>
         <div class="dishes-carousel">
-          <article class="dish-card reveal"><div class="dish-card__img"><img src="https://images.unsplash.com/photo-1432139509613-5c4255815697?w=600&q=80&auto=format&fit=crop" alt="Jerk chicken" /></div><div class="dish-card__body"><h3>Jerk Chicken</h3><p>Smoky pimento-grilled chicken with island spice and scotch bonnet heat.</p><span class="dish-card__tag">Jamaican</span></div></article>
-          <article class="dish-card reveal"><div class="dish-card__img"><img src="https://images.unsplash.com/photo-1547592180-85f173990554?w=600&q=80&auto=format&fit=crop" alt="Oxtail" /></div><div class="dish-card__body"><h3>Braised Oxtail</h3><p>Slow-cooked rich gravy with butter beans, served with rice and peas.</p><span class="dish-card__tag">Jamaican</span></div></article>
-          <article class="dish-card reveal"><div class="dish-card__img"><img src="https://images.unsplash.com/photo-1604329760661-e71dc83f8f26?w=600&q=80&auto=format&fit=crop" alt="Ugandan dish" /></div><div class="dish-card__body"><h3>Luwombo</h3><p>Classic Ugandan banana-leaf stew packed with depth and rich spice.</p><span class="dish-card__tag">Ugandan</span></div></article>
-          <article class="dish-card reveal"><div class="dish-card__img"><img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&q=80&auto=format&fit=crop" alt="Curried goat" /></div><div class="dish-card__body"><h3>Curried Goat</h3><p>Tender goat slow-cooked in aromatic spices, a Caribbean centrepiece dish.</p><span class="dish-card__tag">Jamaican</span></div></article>
-          <article class="dish-card reveal"><div class="dish-card__img"><img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=600&q=80&auto=format&fit=crop" alt="Grilled meats" /></div><div class="dish-card__body"><h3>Live Grill Set</h3><p>Interactive grilled meats and plantain at the station — perfect for festivals.</p><span class="dish-card__tag">Signature</span></div></article>
+          <article class="dish-card reveal"><div class="dish-card__img"><img src="/dish-jerk-chicken.png" onerror="if(this.src!=='https://images.unsplash.com/photo-1432139509613-5c4255815697?w=600&q=80&auto=format&fit=crop')this.src='https://images.unsplash.com/photo-1432139509613-5c4255815697?w=600&q=80&auto=format&fit=crop'" alt="Jerk chicken" /></div><div class="dish-card__body"><h3>Jerk Chicken</h3><p>Smoky pimento-grilled chicken with island spice and scotch bonnet heat.</p><span class="dish-card__tag">Jamaican</span></div></article>
+          <article class="dish-card reveal"><div class="dish-card__img"><img src="/dish-oxtail.png" onerror="if(this.src!=='https://images.unsplash.com/photo-1547592180-85f173990554?w=600&q=80&auto=format&fit=crop')this.src='https://images.unsplash.com/photo-1547592180-85f173990554?w=600&q=80&auto=format&fit=crop'" alt="Oxtail" /></div><div class="dish-card__body"><h3>Braised Oxtail</h3><p>Slow-cooked rich gravy with butter beans, served with rice and peas.</p><span class="dish-card__tag">Jamaican</span></div></article>
+          <article class="dish-card reveal"><div class="dish-card__img"><img src="/dish-luwombo.png" onerror="if(this.src!=='https://images.unsplash.com/photo-1604329760661-e71dc83f8f26?w=600&q=80&auto=format&fit=crop')this.src='https://images.unsplash.com/photo-1604329760661-e71dc83f8f26?w=600&q=80&auto=format&fit=crop'" alt="Ugandan dish" /></div><div class="dish-card__body"><h3>Luwombo</h3><p>Classic Ugandan banana-leaf stew packed with depth and rich spice.</p><span class="dish-card__tag">Ugandan</span></div></article>
+          <article class="dish-card reveal"><div class="dish-card__img"><img src="/dish-curried-goat.png" onerror="if(this.src!=='https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&q=80&auto=format&fit=crop')this.src='https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&q=80&auto=format&fit=crop'" alt="Curried goat" /></div><div class="dish-card__body"><h3>Curried Goat</h3><p>Tender goat slow-cooked in aromatic spices, a Caribbean centrepiece dish.</p><span class="dish-card__tag">Jamaican</span></div></article>
+          <article class="dish-card reveal"><div class="dish-card__img"><img src="/dish-live-grill.png" onerror="if(this.src!=='https://images.unsplash.com/photo-1544025162-d76694265947?w=600&q=80&auto=format&fit=crop')this.src='https://images.unsplash.com/photo-1544025162-d76694265947?w=600&q=80&auto=format&fit=crop'" alt="Grilled meats" /></div><div class="dish-card__body"><h3>Live Grill Set</h3><p>Interactive grilled meats and plantain at the station — perfect for festivals.</p><span class="dish-card__tag">Signature</span></div></article>
         </div>
         <div class="home-dishes__cta"><a href="/menu" class="btn btn--outline-light">View Full Menu</a></div>
       </div>
@@ -136,7 +136,7 @@ export function renderPage(main) {
     <!-- PROMISE PARALLAX -->
     <section class="home-promise" aria-label="Our promise">
       <div class="home-promise__bg">
-        <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=1400&q=80&auto=format&fit=crop" alt="" data-parallax="0.25" />
+        <img src="/parallax-bg.png" onerror="if(this.src!=='https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=1400&q=80&auto=format&fit=crop')this.src='https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=1400&q=80&auto=format&fit=crop'" alt="" data-parallax="0.25" />
         <div class="home-promise__overlay"></div>
       </div>
       <div class="container">

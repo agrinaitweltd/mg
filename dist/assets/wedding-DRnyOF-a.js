@@ -14,7 +14,7 @@ function a(e){e.innerHTML=`
     <section class="section" style="background:var(--bg)">
       <div class="container">
         <div class="editorial-block editorial-block--right reveal">
-          <div class="editorial-block__media"><img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=900&q=80&auto=format&fit=crop" alt="Wedding catering setup" /></div>
+          <div class="editorial-block__media"><img src="/service-wedding.png" onerror="if(this.src!=='https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=900&q=80&auto=format&fit=crop')this.src='https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=900&q=80&auto=format&fit=crop'" alt="Wedding catering setup" /></div>
           <div class="editorial-block__copy">
             <p class="label">Your Special Day</p>
             <h2>Food that makes your wedding unforgettable</h2>

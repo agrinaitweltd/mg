@@ -16,7 +16,7 @@ export function renderPage(main) {
     <section class="about-editorial" aria-label="Our story">
       <div class="container">
         <div class="editorial-block editorial-block--right reveal">
-          <div class="editorial-block__media"><img src="https://images.unsplash.com/photo-1555244162-803834f70033?w=900&q=80&auto=format&fit=crop" alt="Team preparing catering" /></div>
+          <div class="editorial-block__media"><img src="/about-team-prep.png" onerror="if(this.src!=='https://images.unsplash.com/photo-1555244162-803834f70033?w=900&q=80&auto=format&fit=crop')this.src='https://images.unsplash.com/photo-1555244162-803834f70033?w=900&q=80&auto=format&fit=crop'" alt="Team preparing catering" /></div>
           <div class="editorial-block__copy">
             <p class="label">Our Story</p>
             <h2>From South London pop-ups to premium events</h2>
@@ -44,7 +44,7 @@ export function renderPage(main) {
     <section class="about-editorial about-editorial--warm" aria-label="Our approach">
       <div class="container">
         <div class="editorial-block editorial-block--left reveal">
-          <div class="editorial-block__media"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=900&q=80&auto=format&fit=crop" alt="Plated food at event" /></div>
+          <div class="editorial-block__media"><img src="/about-plated.png" onerror="if(this.src!=='https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=900&q=80&auto=format&fit=crop')this.src='https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=900&q=80&auto=format&fit=crop'" alt="Plated food at event" /></div>
           <div class="editorial-block__copy">
             <p class="label">Our Approach</p>
             <h2>Quality at every stage</h2>
@@ -83,7 +83,7 @@ export function renderPage(main) {
         <div class="team-grid">
           <article class="team-card reveal">
             <div class="team-card__img-wrap">
-              <img src="https://images.unsplash.com/photo-1607631568010-a87245c0daf8?w=600&q=80&auto=format&fit=crop" alt="Millz - Head Chef" />
+              <img src="/team-millz.png" onerror="if(this.src!=='https://images.unsplash.com/photo-1607631568010-a87245c0daf8?w=600&q=80&auto=format&fit=crop')this.src='https://images.unsplash.com/photo-1607631568010-a87245c0daf8?w=600&q=80&auto=format&fit=crop'" alt="Millz - Head Chef" />
               <div class="team-card__overlay">
                 <div class="team-card__overlay-info">
                   <p class="team-card__role-label">Head Chef</p>
@@ -100,7 +100,7 @@ export function renderPage(main) {
           </article>
           <article class="team-card reveal">
             <div class="team-card__img-wrap">
-              <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=600&q=80&auto=format&fit=crop" alt="Sophia - Operations Manager" />
+              <img src="/team-sophia.png" onerror="if(this.src!=='https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=600&q=80&auto=format&fit=crop')this.src='https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=600&q=80&auto=format&fit=crop'" alt="Sophia - Operations Manager" />
               <div class="team-card__overlay">
                 <div class="team-card__overlay-info">
                   <p class="team-card__role-label">Operations</p>
@@ -117,7 +117,7 @@ export function renderPage(main) {
           </article>
           <article class="team-card reveal">
             <div class="team-card__img-wrap">
-              <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?w=600&q=80&auto=format&fit=crop" alt="Theo - Service Lead" />
+              <img src="/team-theo.png" onerror="if(this.src!=='https://images.unsplash.com/photo-1556157382-97eda2d62296?w=600&q=80&auto=format&fit=crop')this.src='https://images.unsplash.com/photo-1556157382-97eda2d62296?w=600&q=80&auto=format&fit=crop'" alt="Theo - Service Lead" />
               <div class="team-card__overlay">
                 <div class="team-card__overlay-info">
                   <p class="team-card__role-label">Service Lead</p>
