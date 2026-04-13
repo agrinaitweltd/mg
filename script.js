@@ -10,8 +10,15 @@ if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 /* --- Loading Screen ---------------------------------------- */
 const loadingScreen = document.getElementById("loading-screen");
 if (loadingScreen) {
-  const dismiss = () => loadingScreen.classList.add("hidden");
-  if (document.readyState === "complete") {
+  const alreadyVisited = sessionStorage.getItem('mg_visited');
+  const dismiss = () => {
+    loadingScreen.classList.add("hidden");
+    sessionStorage.setItem('mg_visited', '1');
+  };
+  if (alreadyVisited) {
+    // Skip animation on subsequent page navigations within the session
+    loadingScreen.style.display = 'none';
+  } else if (document.readyState === "complete") {
     setTimeout(dismiss, 200);
   } else {
     window.addEventListener("load", () => setTimeout(dismiss, 250));

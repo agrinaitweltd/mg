@@ -1,4 +1,9 @@
 export function renderPage(main) {
+  // Helper: img tag that falls back to Unsplash if local file is missing
+  function img(local, fallback, alt) {
+    return `<img src="${local}" alt="${alt}" onerror="if(this.src!=='${fallback}')this.src='${fallback}'" loading="lazy" />`;
+  }
+
   main.innerHTML = `
     <section class="page-banner" aria-label="Menu banner">
       <div class="container page-banner__inner">
@@ -12,7 +17,7 @@ export function renderPage(main) {
     </section>
 
     <section class="menu-filter" aria-label="Filter menu">
-      <button class="menu-filter__btn active" data-filter="all">All Dishes</button>
+      <button class="menu-filter__btn" data-filter="all">All Dishes</button>
       <button class="menu-filter__btn" data-filter="jamaican">Jamaican</button>
       <button class="menu-filter__btn" data-filter="ugandan">Ugandan</button>
       <button class="menu-filter__btn" data-filter="sides">Sides</button>
@@ -24,7 +29,7 @@ export function renderPage(main) {
         <div class="menu-grid">
           <article class="spotlight-card spotlight-card--feature" data-category="jamaican">
             <div class="spotlight-card__glow"></div>
-            <div class="spotlight-card__img"><img src="https://images.unsplash.com/photo-1432139509613-5c4255815697?w=1000&q=80&auto=format&fit=crop" alt="Jerk Chicken" /></div>
+            <div class="spotlight-card__img">${img('/dish-jerk-chicken.png','https://images.unsplash.com/photo-1432139509613-5c4255815697?w=1000&q=80&auto=format&fit=crop','Jerk Chicken')}</div>
             <span class="spotlight-card__badge">Bestseller</span>
             <h3>Jerk Chicken</h3>
             <p>Smoky pimento-grilled chicken marinated for 24 hours with a scotch bonnet and allspice rub. Served with rice and peas.</p>
@@ -32,24 +37,28 @@ export function renderPage(main) {
           </article>
           <article class="spotlight-card" data-category="jamaican">
             <div class="spotlight-card__glow"></div>
+            <div class="spotlight-card__img">${img('/dish-oxtail.png','https://images.unsplash.com/photo-1544025162-d76694265947?w=800&q=80&auto=format&fit=crop','Braised Oxtail')}</div>
             <h3>Braised Oxtail</h3>
             <p>Slow-cooked rich gravy with butter beans, Scotch bonnet, and thyme. A true Caribbean centrepiece.</p>
             <div class="spotlight-card__price">from £22 / head</div>
           </article>
           <article class="spotlight-card" data-category="jamaican">
             <div class="spotlight-card__glow"></div>
+            <div class="spotlight-card__img">${img('/dish-curried-goat.png','https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=800&q=80&auto=format&fit=crop','Curried Goat')}</div>
             <h3>Curried Goat</h3>
             <p>Tender goat in a slow-cooked aromatic curry sauce. A wedding and celebration staple.</p>
             <div class="spotlight-card__price">from £20 / head</div>
           </article>
           <article class="spotlight-card" data-category="jamaican">
             <div class="spotlight-card__glow"></div>
+            <div class="spotlight-card__img">${img('/dish-ackee-saltfish.png','https://images.unsplash.com/photo-1567364816519-cbc9c4ffe1eb?w=800&q=80&auto=format&fit=crop','Ackee and Saltfish')}</div>
             <h3>Ackee &amp; Saltfish</h3>
             <p>Jamaica's national dish — ackee sautéed with salt cod, onions, scotch bonnet and sweet peppers.</p>
             <div class="spotlight-card__price">from £16 / head</div>
           </article>
           <article class="spotlight-card" data-category="ugandan">
             <div class="spotlight-card__glow"></div>
+            <div class="spotlight-card__img">${img('/dish-luwombo.png','https://images.unsplash.com/photo-1604908177453-7462950a6a3b?w=800&q=80&auto=format&fit=crop','Luwombo')}</div>
             <span class="spotlight-card__badge">Ugandan</span>
             <h3>Luwombo</h3>
             <p>Classic Ugandan stew steamed in banana leaves — smoky, rich, and deeply flavourful.</p>
@@ -57,18 +66,21 @@ export function renderPage(main) {
           </article>
           <article class="spotlight-card" data-category="ugandan">
             <div class="spotlight-card__glow"></div>
+            <div class="spotlight-card__img">${img('/dish-matoke.png','https://images.unsplash.com/photo-1547592180-85f173990554?w=800&q=80&auto=format&fit=crop','Matoke')}</div>
             <h3>Matoke</h3>
             <p>Green banana cooked in a savoury sauce — a staple East African comfort dish.</p>
             <div class="spotlight-card__price">from £14 / head</div>
           </article>
           <article class="spotlight-card" data-category="ugandan">
             <div class="spotlight-card__glow"></div>
+            <div class="spotlight-card__img">${img('/dish-groundnut-stew.png','https://images.unsplash.com/photo-1604908177522-4dd4e8eb5f71?w=800&q=80&auto=format&fit=crop','Groundnut Stew')}</div>
             <h3>Groundnut Stew</h3>
             <p>Rich peanut-based stew with chicken and aromatic spices. Warming and deeply satisfying.</p>
             <div class="spotlight-card__price">from £17 / head</div>
           </article>
           <article class="spotlight-card" data-category="ugandan">
             <div class="spotlight-card__glow"></div>
+            <div class="spotlight-card__img">${img('/dish-rolex.png','https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=800&q=80&auto=format&fit=crop','Rolex wrap')}</div>
             <h3>Rolex</h3>
             <p>Ugandan street-food classic — eggs and vegetables wrapped in a chapati. Great for casual events.</p>
             <div class="spotlight-card__price">from £12 / head</div>
@@ -85,7 +97,7 @@ export function renderPage(main) {
       </div>
     </section>
 
-    <section class="menu-pricing" aria-label="Service tiers">
+    <section class="menu-pricing" aria-label="Service tiers" data-category="packages">
       <div class="container">
         <div class="section-head reveal"><p class="label">Pricing</p><h2>Service tiers</h2><p class="section-head__sub">All packages include setup, service, and teardown. Prices vary by guest count and location.</p></div>
         <div class="pricing-grid">
@@ -110,19 +122,26 @@ export function initPage(main) {
   const filterBtns = main.querySelectorAll('.menu-filter__btn');
   const cards = main.querySelectorAll('[data-category]');
 
-  filterBtns.forEach((btn) => {
-    btn.addEventListener('click', () => {
-      filterBtns.forEach((b) => b.classList.remove('active'));
-      btn.classList.add('active');
+  // Read ?filter= param from URL (set by nav dropdown links)
+  const urlFilter = new URLSearchParams(window.location.search).get('filter') || 'all';
 
-      const filter = btn.dataset.filter;
-      cards.forEach((card) => {
-        if (filter === 'all' || card.dataset.category === filter) {
-          card.style.display = '';
-        } else {
-          card.style.display = 'none';
-        }
-      });
+  function applyFilter(filter) {
+    filterBtns.forEach((b) => {
+      b.classList.toggle('active', b.dataset.filter === filter);
     });
+    cards.forEach((card) => {
+      if (filter === 'all' || card.dataset.category === filter) {
+        card.style.display = '';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
+
+  // Apply filter from URL on page load
+  applyFilter(urlFilter);
+
+  filterBtns.forEach((btn) => {
+    btn.addEventListener('click', () => applyFilter(btn.dataset.filter));
   });
 }

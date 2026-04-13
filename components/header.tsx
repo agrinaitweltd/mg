@@ -124,10 +124,10 @@ const Header: React.FC = () => {
       path: '/menu',
       dropdown: [
         { name: 'All Dishes', path: '/menu' },
-        { name: 'Jamaican Cuisine', path: '/menu' },
-        { name: 'Ugandan Cuisine', path: '/menu' },
-        { name: 'Sides & Extras', path: '/menu' },
-        { name: 'Packages & Pricing', path: '/menu' },
+        { name: 'Jamaican Cuisine', path: '/menu?filter=jamaican' },
+        { name: 'Ugandan Cuisine', path: '/menu?filter=ugandan' },
+        { name: 'Sides & Extras', path: '/menu?filter=sides' },
+        { name: 'Packages & Pricing', path: '/menu?filter=packages' },
       ],
     },
     {
