@@ -244,7 +244,7 @@ const Header: React.FC = () => {
                   }`}
                 >
                   {link.name}
-                  {link.dropdown && <ChevronDown size={12} className={`transition-transform duration-200 ${isServicesOpen ? 'rotate-180' : ''}`} />}
+                  {link.dropdown && <ChevronDown size={12} className={`transition-transform duration-200 ${openDropdown === link.name ? 'rotate-180' : ''}`} />}
                 </Link>
 
                 {link.dropdown && (
