@@ -81,10 +81,10 @@ export function renderPage(main) {
           </article>
           <article class="spotlight-card" data-category="ugandan">
             <div class="spotlight-card__glow"></div>
-            <div class="spotlight-card__img">${img('/dish-rolex.png','https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=800&q=80&auto=format&fit=crop','Rolex wrap')}</div>
-            <h3>Rolex</h3>
-            <p>Ugandan street-food classic — eggs and vegetables wrapped in a chapati. Great for casual events.</p>
-            <div class="spotlight-card__price">from £12 / head</div>
+            <div class="spotlight-card__img">${img('/dish-matoke.png','https://images.unsplash.com/photo-1604908177522-4dd4e8eb5f71?w=800&q=80&auto=format&fit=crop','Matoke')}</div>
+            <h3>Matoke &amp; Stew</h3>
+            <p>Steamed green banana mash served with a rich beef and tomato stew. A Ugandan household staple, now at your event.</p>
+            <div class="spotlight-card__price">from £14 / head</div>
           </article>
           <article class="spotlight-card spotlight-card--sides" data-category="sides">
             <div class="spotlight-card__glow"></div>

@@ -1,4 +1,4 @@
-function a(e){e.innerHTML=`
+function i(e){e.innerHTML=`
     <section class="page-banner" aria-label="About banner">
       <div class="container page-banner__inner">
         <p class="label">About Us</p>
@@ -81,14 +81,8 @@ function a(e){e.innerHTML=`
         </div>
         <div class="team-grid">
           <article class="team-card reveal">
-            <div class="team-card__img-wrap">
-              <img src="/team-moses.png" onerror="if(this.src!=='https://images.unsplash.com/photo-1607631568010-a87245c0daf8?w=600&q=80&auto=format&fit=crop')this.src='https://images.unsplash.com/photo-1607631568010-a87245c0daf8?w=600&q=80&auto=format&fit=crop'" alt="Moses Kasibante - Co-Founder" />
-              <div class="team-card__overlay">
-                <div class="team-card__overlay-info">
-                  <p class="team-card__role-label">Co-Founder</p>
-                  <p class="team-card__name">Moses Kasibante</p>
-                </div>
-              </div>
+            <div class="team-card__avatar">
+              <div class="team-card__initials">MK</div>
             </div>
             <div class="team-card__body">
               <p class="team-card__role">Co-Founder</p>
@@ -98,14 +92,8 @@ function a(e){e.innerHTML=`
             </div>
           </article>
           <article class="team-card reveal">
-            <div class="team-card__img-wrap">
-              <img src="/team-jamillah.png" onerror="if(this.src!=='https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80&auto=format&fit=crop')this.src='https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80&auto=format&fit=crop'" alt="Jamillah Kasibante - Co-Founder" />
-              <div class="team-card__overlay">
-                <div class="team-card__overlay-info">
-                  <p class="team-card__role-label">Co-Founder</p>
-                  <p class="team-card__name">Jamillah Kasibante</p>
-                </div>
-              </div>
+            <div class="team-card__avatar">
+              <div class="team-card__initials">JK</div>
             </div>
             <div class="team-card__body">
               <p class="team-card__role">Co-Founder</p>
@@ -128,4 +116,4 @@ function a(e){e.innerHTML=`
         </div>
       </div>
     </section>
-  `}export{a as renderPage};
+  `}export{i as renderPage};
