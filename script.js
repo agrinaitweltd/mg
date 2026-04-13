@@ -40,7 +40,7 @@ if (loadingScreen) {
     const startTime = Date.now();
     const dismissAfterMin = () => {
       const elapsed = Date.now() - startTime;
-      const remaining = Math.max(0, 2000 - elapsed);
+      const remaining = Math.max(0, 4000 - elapsed);
       setTimeout(dismiss, remaining);
     };
     if (document.readyState === "complete") {
