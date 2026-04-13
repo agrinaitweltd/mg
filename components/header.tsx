@@ -48,9 +48,8 @@ const MAIN_LOGO_SRC = '/logo.png';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
-  const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
-  const [isCleaningOpen, setIsCleaningOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const [openMobileDropdown, setOpenMobileDropdown] = useState<string | null>(null);
   const [isMobileCleaningOpen, setIsMobileCleaningOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isDesktopSearchFocused, setIsDesktopSearchFocused] = useState(false);
@@ -83,9 +82,8 @@ const Header: React.FC = () => {
 
   useEffect(() => {
     setIsMenuOpen(false);
-    setIsServicesOpen(false);
-    setIsMobileServicesOpen(false);
-    setIsCleaningOpen(false);
+    setOpenDropdown(null);
+    setOpenMobileDropdown(null);
     setIsMobileCleaningOpen(false);
     setIsSearchOpen(false);
     setSearchQuery('');
@@ -188,29 +186,27 @@ const Header: React.FC = () => {
             <div className="flex items-center gap-4">
               <Link
                 to="/about"
-                className="px-2.5 py-1.5 rounded-md transition-colors flex items-center gap-1 text-stone-700 hover:bg-stone-900 hover:text-[#f5c800] active:bg-stone-900 active:text-[#f5c800]"
+                className="px-2.5 py-1.5 transition-colors flex items-center gap-1 text-stone-600 hover:text-[#c8102e]"
               >
-                About us <ChevronDown size={12} />
+                About us
               </Link>
-              <button
-                type="button"
-                className={`px-2.5 py-1.5 rounded-md transition-colors flex items-center gap-1 ${isServicesOpen ? 'bg-stone-900 text-[#f5c800]' : 'text-stone-700 hover:bg-stone-900 hover:text-[#f5c800]'}`}
-                onClick={() => setIsServicesOpen((open: boolean) => !open)}
+              <Link
+                to="/menu"
+                className="px-2.5 py-1.5 transition-colors flex items-center gap-1 text-stone-600 hover:text-[#c8102e]"
               >
                 Our menu
-                <ChevronDown size={12} className={`transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} />
-              </button>
+              </Link>
               <Link
                 to="/events"
-                className="px-2.5 py-1.5 rounded-md transition-colors flex items-center gap-1 text-stone-700 hover:bg-stone-900 hover:text-[#f5c800] active:bg-stone-900 active:text-[#f5c800]"
+                className="px-2.5 py-1.5 transition-colors flex items-center gap-1 text-stone-600 hover:text-[#c8102e]"
               >
-                Events <ChevronDown size={12} />
+                Events
               </Link>
               <Link
                 to="/contact"
-                className="px-2.5 py-1.5 rounded-md transition-colors flex items-center gap-1 text-stone-700 hover:bg-stone-900 hover:text-[#f5c800] active:bg-stone-900 active:text-[#f5c800]"
+                className="px-2.5 py-1.5 transition-colors flex items-center gap-1 text-stone-600 hover:text-[#c8102e]"
               >
-                Contact us <ChevronDown size={12} />
+                Contact us
               </Link>
             </div>
             <div className="flex items-center gap-3 px-2.5">
@@ -230,21 +226,21 @@ const Header: React.FC = () => {
               <div
                 key={link.path}
                 className="relative"
-                onMouseEnter={() => link.dropdown && setIsServicesOpen(true)}
-                onMouseLeave={() => link.dropdown && setIsServicesOpen(false)}
+                onMouseEnter={() => link.dropdown && setOpenDropdown(link.name)}
+                onMouseLeave={() => link.dropdown && setOpenDropdown(null)}
               >
                 <Link
                   to={link.path}
                   onClick={(e) => {
                     if (link.dropdown) {
                       e.preventDefault();
-                      setIsServicesOpen((open) => !open);
+                      setOpenDropdown(openDropdown === link.name ? null : link.name);
                     }
                   }}
-                  className={`px-3.5 py-2 rounded-lg text-[15px] font-bold tracking-wide transition-colors flex items-center gap-1.5 ${
-                    link.dropdown && isServicesOpen
-                      ? 'bg-stone-900 text-[#f5c800]'
-                      : 'text-stone-800 hover:bg-stone-900 hover:text-[#f5c800] active:bg-stone-900 active:text-[#f5c800]'
+                  className={`px-3.5 py-2 text-[15px] font-bold tracking-wide transition-colors flex items-center gap-1.5 ${
+                    openDropdown === link.name
+                      ? 'text-[#c8102e]'
+                      : 'text-stone-800 hover:text-[#c8102e]'
                   }`}
                 >
                   {link.name}
@@ -253,7 +249,7 @@ const Header: React.FC = () => {
 
                 {link.dropdown && (
                   <AnimatePresence>
-                    {isServicesOpen && (
+                    {openDropdown === link.name && (
                       <motion.div
                         initial={{ opacity: 0, y: 8, scale: 0.98 }}
                         animate={{ opacity: 1, y: 0, scale: 1 }}
@@ -266,24 +262,20 @@ const Header: React.FC = () => {
                               <div
                                 key={sub.name}
                                 className="relative"
-                                onMouseEnter={() => setIsCleaningOpen(true)}
-                                onMouseLeave={() => setIsCleaningOpen(false)}
+                                onMouseEnter={() => setIsMobileCleaningOpen(true)}
+                                onMouseLeave={() => setIsMobileCleaningOpen(false)}
                               >
                                 <button
                                   type="button"
-                                  className={`w-full px-4 py-3 rounded-xl text-[13px] font-semibold transition-all flex items-center justify-between ${
-                                    isCleaningOpen
-                                      ? 'bg-stone-900 text-[#f5c800]'
-                                      : 'text-stone-700 hover:bg-stone-900 hover:text-[#f5c800] active:bg-stone-900 active:text-[#f5c800]'
-                                  }`}
-                                  onClick={() => setIsCleaningOpen((open) => !open)}
+                                  className="w-full px-4 py-3 rounded-xl text-[13px] font-semibold transition-all flex items-center justify-between text-stone-700 hover:text-[#c8102e]"
+                                  onClick={() => setIsMobileCleaningOpen((open) => !open)}
                                 >
                                   {sub.name}
-                                  <ChevronRight size={14} className={`transition-transform ${isCleaningOpen ? 'translate-x-0.5' : ''}`} />
+                                  <ChevronRight size={14} className={`transition-transform ${isMobileCleaningOpen ? 'translate-x-0.5' : ''}`} />
                                 </button>
 
                                 <AnimatePresence>
-                                  {isCleaningOpen && (
+                                  {isMobileCleaningOpen && (
                                     <motion.div
                                       initial={{ opacity: 0, x: 8, scale: 0.98 }}
                                       animate={{ opacity: 1, x: 0, scale: 1 }}
@@ -296,7 +288,7 @@ const Header: React.FC = () => {
                                             <Link
                                               key={child.name}
                                               to={child.path}
-                                              className="w-full px-4 py-3 rounded-xl text-[13px] font-semibold transition-all flex items-center justify-between group/sub text-stone-700 hover:bg-stone-900 hover:text-[#f5c800] active:bg-stone-900 active:text-[#f5c800]"
+                                              className="w-full px-4 py-3 rounded-xl text-[13px] font-semibold transition-all flex items-center justify-between group/sub text-stone-700 hover:text-[#c8102e]"
                                             >
                                               {child.name}
                                               <ChevronRight size={14} className="opacity-0 -translate-x-2 group-hover/sub:opacity-100 group-hover/sub:translate-x-0 transition-all" />
@@ -312,7 +304,7 @@ const Header: React.FC = () => {
                               <Link
                                 key={sub.name}
                                 to={sub.path || '/services'}
-                                className="px-4 py-3 rounded-xl text-[13px] font-semibold transition-all flex items-center justify-between group/sub text-stone-700 hover:bg-stone-900 hover:text-[#f5c800] active:bg-stone-900 active:text-[#f5c800]"
+                                className="px-4 py-3 rounded-xl text-[13px] font-semibold transition-all flex items-center justify-between group/sub text-stone-700 hover:text-[#c8102e]"
                               >
                                 {sub.name}
                                 <ChevronRight size={14} className="opacity-0 -translate-x-2 group-hover/sub:opacity-100 group-hover/sub:translate-x-0 transition-all" />
@@ -542,17 +534,17 @@ const Header: React.FC = () => {
                     <>
                       <button
                         type="button"
-                        onClick={() => setIsMobileServicesOpen((open) => !open)}
+                        onClick={() => setOpenMobileDropdown(openMobileDropdown === link.name ? null : link.name)}
                         className="w-full flex items-center justify-between text-white uppercase px-5 py-5"
                       >
                         <span className="text-[15px] font-semibold tracking-[0.12em]">
                           {link.name}
                         </span>
-                        <ChevronRight size={20} className={`text-white/70 transition-transform ${isMobileServicesOpen ? 'rotate-90' : ''}`} />
+                        <ChevronRight size={20} className={`text-white/70 transition-transform ${openMobileDropdown === link.name ? 'rotate-90' : ''}`} />
                       </button>
 
                       <AnimatePresence>
-                        {isMobileServicesOpen && (
+                        {openMobileDropdown === link.name && (
                           <motion.div
                             initial={{ opacity: 0, height: 0 }}
                             animate={{ opacity: 1, height: 'auto' }}

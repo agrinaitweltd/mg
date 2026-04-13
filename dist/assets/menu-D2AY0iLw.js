@@ -1,4 +1,4 @@
-function e(a){a.innerHTML=`
+function n(e){e.innerHTML=`
     <section class="page-banner" aria-label="Menu banner">
       <div class="container page-banner__inner">
         <p class="label">Our Menu</p>
@@ -102,4 +102,4 @@ function e(a){a.innerHTML=`
         <a href="/contact" class="btn btn--fill btn--lg">Request a Custom Menu</a>
       </div>
     </section>
-  `}export{e as renderPage};
+  `}function l(e){const t=e.querySelectorAll(".menu-filter__btn"),c=e.querySelectorAll("[data-category]");t.forEach(s=>{s.addEventListener("click",()=>{t.forEach(a=>a.classList.remove("active")),s.classList.add("active");const i=s.dataset.filter;c.forEach(a=>{i==="all"||a.dataset.category===i?a.style.display="":a.style.display="none"})})})}export{l as initPage,n as renderPage};

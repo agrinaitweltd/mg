@@ -56,6 +56,10 @@ async function bootstrap() {
   const module = await loader();
   module.renderPage(main);
 
+  if (typeof module.initPage === 'function') {
+    module.initPage(main);
+  }
+
   await import("/script.js");
 }
 

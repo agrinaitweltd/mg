@@ -105,3 +105,24 @@ export function renderPage(main) {
     </section>
   `;
 }
+
+export function initPage(main) {
+  const filterBtns = main.querySelectorAll('.menu-filter__btn');
+  const cards = main.querySelectorAll('[data-category]');
+
+  filterBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach((b) => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const filter = btn.dataset.filter;
+      cards.forEach((card) => {
+        if (filter === 'all' || card.dataset.category === filter) {
+          card.style.display = '';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+}

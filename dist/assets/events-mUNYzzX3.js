@@ -1,4 +1,4 @@
-function a(e){e.innerHTML=`
+function e(a){a.innerHTML=`
     <section class="page-banner" aria-label="Events banner">
       <div class="container page-banner__inner">
         <p class="label">Events</p>
@@ -15,42 +15,70 @@ function a(e){e.innerHTML=`
       <div class="container">
         <div class="section-head reveal">
           <p class="label">What We Cater</p>
-          <h2>Every type of event, every scale</h2>
-          <p class="section-head__sub">We adapt our service format to suit the occasion — formal or relaxed, intimate or large.</p>
+          <h2>Every occasion, fully covered</h2>
+          <p class="section-head__sub">We tailor the food, format, and service to match your event — from intimate gatherings to large-scale outdoor productions.</p>
         </div>
-        <div class="event-type-grid">
-          <article class="et-card reveal">
-            <div class="et-card__img"><img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=800&q=80&auto=format&fit=crop" alt="Wedding catering" /></div>
-            <div class="et-card__body">
+        <div class="cater-grid">
+          <a href="/services/wedding" class="cater-card reveal">
+            <div class="cater-card__img">
+              <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=900&q=80&auto=format&fit=crop" alt="Wedding catering" />
+              <div class="cater-card__overlay"></div>
+            </div>
+            <div class="cater-card__body">
+              <span class="cater-card__icon">💍</span>
               <h3>Weddings</h3>
-              <p>Custom menus, tasting sessions, full plated service, and uniformed staff. We handle every food and service detail so you don't have to.</p>
-              <ul class="et-card__pills"><li>Tasting session included</li><li>Custom menu design</li><li>Plated &amp; buffet options</li></ul>
+              <p>Custom menus, tasting sessions, full plated service and uniformed staff.</p>
+              <ul class="et-card__pills">
+                <li>Tasting session</li><li>Custom menu</li><li>Plated &amp; buffet</li>
+              </ul>
+              <span class="cater-card__cta">Learn more →</span>
             </div>
-          </article>
-          <article class="et-card reveal">
-            <div class="et-card__img"><img src="https://images.unsplash.com/photo-1531058020387-3be344556be6?w=800&q=80&auto=format&fit=crop" alt="Corporate event" /></div>
-            <div class="et-card__body">
+          </a>
+          <a href="/services/corporate" class="cater-card reveal">
+            <div class="cater-card__img">
+              <img src="https://images.unsplash.com/photo-1531058020387-3be344556be6?w=900&q=80&auto=format&fit=crop" alt="Corporate event catering" />
+              <div class="cater-card__overlay"></div>
+            </div>
+            <div class="cater-card__body">
+              <span class="cater-card__icon">🏢</span>
               <h3>Corporate Events</h3>
-              <p>Reliable, on-time delivery for product launches, networking events, team lunches, and conferences. Multiple format options available.</p>
-              <ul class="et-card__pills"><li>Buffet &amp; box lunch</li><li>Same-day delivery</li><li>Branded setups available</li></ul>
+              <p>Reliable, on-brand delivery for launches, networking and team lunches.</p>
+              <ul class="et-card__pills">
+                <li>Buffet &amp; box lunch</li><li>Same-day delivery</li><li>Branded setups</li>
+              </ul>
+              <span class="cater-card__cta">Learn more →</span>
             </div>
-          </article>
-          <article class="et-card reveal">
-            <div class="et-card__img"><img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?w=800&q=80&auto=format&fit=crop" alt="Private party" /></div>
-            <div class="et-card__body">
+          </a>
+          <a href="/services/parties" class="cater-card reveal">
+            <div class="cater-card__img">
+              <img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?w=900&q=80&auto=format&fit=crop" alt="Private party catering" />
+              <div class="cater-card__overlay"></div>
+            </div>
+            <div class="cater-card__body">
+              <span class="cater-card__icon">🎉</span>
               <h3>Private Parties</h3>
-              <p>Birthdays, anniversaries, graduations — flexible formats for any celebration. We bring the restaurant experience to your venue.</p>
-              <ul class="et-card__pills"><li>From 20 guests</li><li>Flexible menus</li><li>Themed service options</li></ul>
+              <p>Birthdays, anniversaries, graduations — brought to your venue with style.</p>
+              <ul class="et-card__pills">
+                <li>From 20 guests</li><li>Flexible menus</li><li>Themed service</li>
+              </ul>
+              <span class="cater-card__cta">Learn more →</span>
             </div>
-          </article>
-          <article class="et-card reveal">
-            <div class="et-card__img"><img src="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?w=800&q=80&auto=format&fit=crop" alt="Festival catering" /></div>
-            <div class="et-card__body">
+          </a>
+          <a href="/services/festival" class="cater-card reveal">
+            <div class="cater-card__img">
+              <img src="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?w=900&q=80&auto=format&fit=crop" alt="Festival catering" />
+              <div class="cater-card__overlay"></div>
+            </div>
+            <div class="cater-card__body">
+              <span class="cater-card__icon">🎪</span>
               <h3>Festivals &amp; Outdoor</h3>
-              <p>High-volume live grill stations designed for festivals, outdoor events, and large gatherings. Queue management and premium quality at scale.</p>
-              <ul class="et-card__pills"><li>Live grill stations</li><li>High-volume capacity</li><li>Outdoor setup included</li></ul>
+              <p>High-volume live grill stations designed for festivals and large gatherings.</p>
+              <ul class="et-card__pills">
+                <li>Live grill stations</li><li>High-volume</li><li>Outdoor setup</li>
+              </ul>
+              <span class="cater-card__cta">Learn more →</span>
             </div>
-          </article>
+          </a>
         </div>
       </div>
     </section>
@@ -126,4 +154,4 @@ function a(e){e.innerHTML=`
         <a href="/contact" class="btn btn--fill btn--lg">Book a Consultation</a>
       </div>
     </section>
-  `}export{a as renderPage};
+  `}export{e as renderPage};

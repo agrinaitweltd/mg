@@ -664,9 +664,23 @@ p{margin:0 0 1em}
 .et-card p{color:var(--ink-soft);font-size:.9rem;margin-bottom:0}
 .et-card__pills{list-style:none;padding:0;margin:1rem 0 0;display:flex;flex-wrap:wrap;gap:.4rem}
 .et-card__pills li{background:var(--accent-pale);color:var(--accent-dark);font-size:.75rem;font-weight:600;padding:.3rem .75rem;border-radius:var(--radius-xl)}
+/* --- Cater Grid (What We Cater section) -------------------- */
+.cater-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem;margin-top:2.5rem}
+.cater-card{display:flex;flex-direction:column;border-radius:var(--radius-md);overflow:hidden;background:var(--surface);box-shadow:var(--shadow-sm);text-decoration:none;color:inherit;transition:transform .3s ease,box-shadow .3s ease}
+.cater-card:hover{transform:translateY(-8px);box-shadow:var(--shadow-md)}
+.cater-card__img{position:relative;aspect-ratio:3/4;overflow:hidden}
+.cater-card__img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s ease}
+.cater-card:hover .cater-card__img img{transform:scale(1.07)}
+.cater-card__overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.65) 0%,transparent 55%)}
+.cater-card__body{padding:1.25rem 1.25rem 1.5rem;display:flex;flex-direction:column;gap:.5rem;flex:1}
+.cater-card__icon{font-size:1.4rem;line-height:1}
+.cater-card h3{font-size:1.05rem;font-weight:700;margin:0;color:var(--ink)}
+.cater-card p{font-size:.85rem;color:var(--ink-soft);margin:0;flex:1}
+.cater-card__cta{font-size:.8rem;font-weight:700;color:var(--accent);letter-spacing:.04em;margin-top:auto}
+.cater-card:hover .cater-card__cta{text-decoration:underline}
+@media(max-width:900px){.cater-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:500px){.cater-grid{grid-template-columns:1fr}}
 .events-listings{padding:4rem 0;background:var(--bg)}
-
-@media(max-width:700px){.event-type-grid{grid-template-columns:1fr}}
 
 /* --- Step Line Process ------------------------------------- */
 .events-process{padding:5rem 0;background:var(--bg-dark);color:#fff}
