@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { createPortal } from 'react-dom';
 import { MemoryRouter, useLocation } from 'react-router-dom';
 import { createRoot } from 'react-dom/client';
 
@@ -443,8 +444,9 @@ const Header: React.FC = () => {
         </div>
       </motion.div>
 
-      {/* Mobile Search Overlay */}
-      <AnimatePresence>
+      {/* Mobile Search Overlay — portalled to body to escape header stacking context */}
+      {createPortal(
+        <AnimatePresence>
         {isSearchOpen && (
           <motion.div
             initial={{ opacity: 0 }}
@@ -509,10 +511,13 @@ const Header: React.FC = () => {
             </div>
           </motion.div>
         )}
-      </AnimatePresence>
+      </AnimatePresence>,
+      document.body
+      )}
 
-      {/* Mobile Nav */}
-      <AnimatePresence>
+      {/* Mobile Nav — portalled to body to escape header stacking context */}
+      {createPortal(
+        <AnimatePresence>
         {isMenuOpen && (
           <motion.div
             initial={{ opacity: 0, y: -12 }}
@@ -616,7 +621,9 @@ const Header: React.FC = () => {
             </div>
           </motion.div>
         )}
-      </AnimatePresence>
+      </AnimatePresence>,
+      document.body
+      )}
     </header>
   );
 };
