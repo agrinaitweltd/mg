@@ -210,7 +210,7 @@ const Header: React.FC = () => {
               </Link>
             </div>
             <div className="flex items-center gap-3 px-2.5">
-              <a href="tel:+440000000000" className="hover:text-[#f5c800] transition-colors">+44 0000 000 000</a>
+              <a href="tel:+447749896334" className="hover:text-[#f5c800] transition-colors">+44 7749 896334</a>
               <span className="text-stone-300">|</span>
               <a href="mailto:hello@millzgrill.co.uk" className="hover:text-[#f5c800] transition-colors">hello@millzgrill.co.uk</a>
             </div>
