@@ -53,6 +53,7 @@ const Header: React.FC = () => {
   const [isCleaningOpen, setIsCleaningOpen] = useState(false);
   const [isMobileCleaningOpen, setIsMobileCleaningOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [isDesktopSearchFocused, setIsDesktopSearchFocused] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [scrolled, setScrolled] = useState(false);
   const searchInputRef = useRef<HTMLInputElement>(null);
@@ -60,11 +61,20 @@ const Header: React.FC = () => {
 
   const allServices = [
     { name: 'Wedding Catering', path: '/menu' },
-    { name: 'Corporate Events', path: '/menu' },
-    { name: 'Private Parties', path: '/menu' },
-    { name: 'Festival Catering', path: '/menu' },
+    { name: 'Corporate Events', path: '/events' },
+    { name: 'Private Parties', path: '/events' },
+    { name: 'Festival Catering', path: '/events' },
     { name: 'Jamaican Cuisine', path: '/menu' },
     { name: 'Ugandan Cuisine', path: '/menu' },
+    { name: 'Jerk Chicken', path: '/menu' },
+    { name: 'Curried Goat', path: '/menu' },
+    { name: 'Live Grill Stations', path: '/events' },
+    { name: 'Menu Packages', path: '/menu' },
+    { name: 'About Us', path: '/about' },
+    { name: 'Our Team', path: '/about' },
+    { name: 'Gallery', path: '/gallery' },
+    { name: 'Contact Us', path: '/contact' },
+    { name: 'Get a Quote', path: '/contact' },
   ];
 
   const filteredServices = searchQuery.trim()
@@ -308,14 +318,46 @@ const Header: React.FC = () => {
             ))}
           </nav>
 
-          <div className="flex items-center gap-3">
+            <div className="flex items-center gap-3">
             <div className="relative">
               <input
                 type="text"
-                placeholder="Search menu..."
-                className="w-64 h-11 rounded-lg border border-slate-200 bg-white pl-4 pr-10 text-sm text-slate-700 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-krb-purple/30"
+                placeholder="Search menu, pages..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                onFocus={() => setIsDesktopSearchFocused(true)}
+                onBlur={() => setTimeout(() => setIsDesktopSearchFocused(false), 150)}
+                className="w-64 h-11 rounded-lg border border-slate-200 bg-white pl-4 pr-10 text-sm text-slate-700 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-yellow-300/60"
               />
-              <Search size={18} className="absolute right-3 top-1/2 -translate-y-1/2 text-krb-purple" />
+              <Search size={18} className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400" />
+              <AnimatePresence>
+                {isDesktopSearchFocused && searchQuery.trim().length > 0 && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 6, scale: 0.98 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    exit={{ opacity: 0, y: 6, scale: 0.98 }}
+                    transition={{ duration: 0.16 }}
+                    className="absolute top-full left-0 right-0 mt-2 bg-white rounded-xl shadow-2xl border border-slate-100 overflow-hidden z-[300]"
+                  >
+                    {filteredServices.length > 0 ? (
+                      filteredServices.map((s) => (
+                        <a
+                          key={s.name + s.path}
+                          href={s.path}
+                          className="flex items-center justify-between px-4 py-3 text-sm font-semibold text-slate-700 hover:bg-yellow-50 hover:text-slate-900 transition-colors border-b border-slate-50 last:border-0"
+                          onMouseDown={(e) => e.preventDefault()}
+                          onClick={() => { setSearchQuery(''); setIsDesktopSearchFocused(false); }}
+                        >
+                          <span>{s.name}</span>
+                          <ArrowRight size={14} className="text-slate-300" />
+                        </a>
+                      ))
+                    ) : (
+                      <div className="px-4 py-5 text-sm text-slate-400 text-center">No results for &ldquo;{searchQuery}&rdquo;</div>
+                    )}
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
             <Link
               to="/contact"

@@ -11,18 +11,27 @@ export function renderPage(main) {
     <section class="home-hero" aria-label="Home hero">
       <div class="container">
         <div class="home-hero__inner">
-          <div class="home-hero__text reveal">
-            <p class="label">Premium Catering</p>
-            <h1 class="home-hero__heading">Catering that turns <em>events</em> into memories.</h1>
-            <p class="home-hero__sub">Millz Grill delivers premium Jamaican and Ugandan menus for weddings, private functions, and corporate events across the UK.</p>
-            <div class="home-hero__actions">
+          <div class="home-hero__text">
+            <p class="home-hero__label">Premium UK Catering</p>
+            <h1 class="home-hero__heading reveal">Catering that turns <em>events</em> into memories.</h1>
+            <p class="home-hero__sub reveal">Millz Grill delivers premium Jamaican and Ugandan menus for weddings, private functions, and corporate events across the UK.</p>
+            <div class="home-hero__actions reveal">
               <a href="/contact" class="btn btn--fill btn--lg">Request a Quote</a>
-              <a href="/menu" class="btn btn--outline btn--lg">Explore Menu</a>
+              <a href="/menu" class="btn btn--outline-light btn--lg">Explore Menu</a>
+            </div>
+            <div class="home-hero__trust reveal">
+              <div class="home-hero__trust-stat"><strong>500+</strong><span>Events Catered</span></div>
+              <div class="home-hero__trust-divider"></div>
+              <div class="home-hero__trust-stat"><strong>12+</strong><span>Years Experience</span></div>
+              <div class="home-hero__trust-divider"></div>
+              <div class="home-hero__trust-stat"><strong>98%</strong><span>Client Satisfaction</span></div>
             </div>
           </div>
-          <div class="home-hero__img reveal">
+          <div class="home-hero__img reveal-scale">
             <img src="https://images.unsplash.com/photo-1555244162-803834f70033?w=900&q=80&auto=format&fit=crop" alt="Catering setup" />
+            <div class="home-hero__img-overlay"></div>
             <div class="home-hero__badge"><strong>500+</strong> Events catered</div>
+            <div class="home-hero__frame"></div>
           </div>
         </div>
       </div>

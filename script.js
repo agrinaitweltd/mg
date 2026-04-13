@@ -36,23 +36,28 @@ document.querySelectorAll(".site-nav a").forEach((a) => {
   if (h === path) a.classList.add("active");
 });
 
-/* --- Scroll Reveal (staggered siblings) -------------------- */
+/* --- Scroll Reveal (staggered siblings, directional variants) */
+const REVEAL_CLASSES = ['reveal', 'reveal-left', 'reveal-right', 'reveal-scale'];
 const revealObs = new IntersectionObserver(
   (entries) => entries.forEach((e) => {
     if (e.isIntersecting) {
-      // stagger siblings in a grid
-      const siblings = e.target.parentElement?.querySelectorAll(".reveal");
-      if (siblings) {
-        let i = 0;
-        siblings.forEach((s) => { if (!s.classList.contains("visible")) { s.style.transitionDelay = (i++ * 0.07) + "s"; } });
+      const el = e.target;
+      // stagger siblings that share the same reveal class in the same parent
+      const cls = REVEAL_CLASSES.find((c) => el.classList.contains(c));
+      if (cls) {
+        const siblings = el.parentElement?.querySelectorAll(`.${cls}`);
+        if (siblings) {
+          let i = 0;
+          siblings.forEach((s) => { if (!s.classList.contains('visible')) { s.style.transitionDelay = (i++ * 0.09) + 's'; } });
+        }
       }
-      e.target.classList.add("visible");
-      revealObs.unobserve(e.target);
+      el.classList.add('visible');
+      revealObs.unobserve(el);
     }
   }),
-  { threshold: 0.1, rootMargin: "0px 0px -30px 0px" }
+  { threshold: 0.08, rootMargin: '0px 0px -40px 0px' }
 );
-document.querySelectorAll(".reveal").forEach((el) => revealObs.observe(el));
+document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale').forEach((el) => revealObs.observe(el));
 
 /* --- Parallax on scroll ------------------------------------ */
 const parallaxEls = document.querySelectorAll("[data-parallax]");

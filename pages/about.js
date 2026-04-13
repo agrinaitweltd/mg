@@ -78,11 +78,60 @@ export function renderPage(main) {
         <div class="about-values__head reveal">
           <p class="label">The Team</p>
           <h2>The people behind every event</h2>
+          <p style="color:var(--ink-soft);max-width:540px;margin:0 auto;font-size:1rem">Each event is led by experienced professionals who care about quality at every stage of your booking.</p>
         </div>
         <div class="team-grid">
-          <article class="team-card reveal"><img src="https://images.unsplash.com/photo-1607631568010-a87245c0daf8?w=500&q=80&auto=format&fit=crop" alt="Head chef" /><h3>Head Chef</h3><p>Menu design, quality control, and kitchen leadership. Over 15 years of culinary experience.</p></article>
-          <article class="team-card reveal"><img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=500&q=80&auto=format&fit=crop" alt="Operations manager" /><h3>Operations Manager</h3><p>Logistics, staffing, and event delivery planning to ensure every booking runs flawlessly.</p></article>
-          <article class="team-card reveal"><img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?w=500&q=80&auto=format&fit=crop" alt="Service lead" /><h3>Service Lead</h3><p>Front-of-house coordination, guest experience, and day-of event management.</p></article>
+          <article class="team-card reveal">
+            <div class="team-card__img-wrap">
+              <img src="https://images.unsplash.com/photo-1607631568010-a87245c0daf8?w=600&q=80&auto=format&fit=crop" alt="Millz - Head Chef" />
+              <div class="team-card__overlay">
+                <div class="team-card__overlay-info">
+                  <p class="team-card__role-label">Head Chef</p>
+                  <p class="team-card__name">Millz</p>
+                </div>
+              </div>
+            </div>
+            <div class="team-card__body">
+              <p class="team-card__role">Head Chef &amp; Founder</p>
+              <h3>Millz</h3>
+              <p>Menu design, quality control, and kitchen leadership. Over 15 years of culinary experience spanning Jamaica and Uganda.</p>
+              <div class="team-card__accent"></div>
+            </div>
+          </article>
+          <article class="team-card reveal">
+            <div class="team-card__img-wrap">
+              <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=600&q=80&auto=format&fit=crop" alt="Sophia - Operations Manager" />
+              <div class="team-card__overlay">
+                <div class="team-card__overlay-info">
+                  <p class="team-card__role-label">Operations</p>
+                  <p class="team-card__name">Sophia</p>
+                </div>
+              </div>
+            </div>
+            <div class="team-card__body">
+              <p class="team-card__role">Operations Manager</p>
+              <h3>Sophia</h3>
+              <p>Logistics, staffing, and event delivery planning. Ensures every booking runs without a hitch from brief to breakdown.</p>
+              <div class="team-card__accent"></div>
+            </div>
+          </article>
+          <article class="team-card reveal">
+            <div class="team-card__img-wrap">
+              <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?w=600&q=80&auto=format&fit=crop" alt="Theo - Service Lead" />
+              <div class="team-card__overlay">
+                <div class="team-card__overlay-info">
+                  <p class="team-card__role-label">Service Lead</p>
+                  <p class="team-card__name">Theo</p>
+                </div>
+              </div>
+            </div>
+            <div class="team-card__body">
+              <p class="team-card__role">Service Lead</p>
+              <h3>Theo</h3>
+              <p>Front-of-house coordination and guest experience. Manages day-of service to deliver a seamless, polished event.</p>
+              <div class="team-card__accent"></div>
+            </div>
+          </article>
         </div>
       </div>
     </section>
