@@ -60,18 +60,18 @@ const Header: React.FC = () => {
   const location = useLocation();
 
   const allServices = [
-    { name: 'Wedding Catering', path: '/menu' },
-    { name: 'Corporate Events', path: '/events' },
-    { name: 'Private Parties', path: '/events' },
-    { name: 'Festival Catering', path: '/events' },
+    { name: 'Wedding Catering', path: '/services/wedding' },
+    { name: 'Corporate Events', path: '/services/corporate' },
+    { name: 'Private Parties', path: '/services/parties' },
+    { name: 'Festival & Outdoor', path: '/services/festival' },
+    { name: 'Live Grill Stations', path: '/services/live-grill' },
+    { name: 'Nationwide Delivery', path: '/services/delivery' },
     { name: 'Jamaican Cuisine', path: '/menu' },
     { name: 'Ugandan Cuisine', path: '/menu' },
     { name: 'Jerk Chicken', path: '/menu' },
     { name: 'Curried Goat', path: '/menu' },
-    { name: 'Live Grill Stations', path: '/events' },
     { name: 'Menu Packages', path: '/menu' },
     { name: 'About Us', path: '/about' },
-    { name: 'Our Team', path: '/about' },
     { name: 'Gallery', path: '/gallery' },
     { name: 'Contact Us', path: '/contact' },
     { name: 'Get a Quote', path: '/contact' },
@@ -125,12 +125,23 @@ const Header: React.FC = () => {
       name: 'Menu',
       path: '/menu',
       dropdown: [
+        { name: 'All Dishes', path: '/menu' },
         { name: 'Jamaican Cuisine', path: '/menu' },
         { name: 'Ugandan Cuisine', path: '/menu' },
-        { name: 'Wedding Catering', path: '/menu' },
-        { name: 'Corporate Events', path: '/menu' },
-        { name: 'Private Parties', path: '/menu' },
-        { name: 'Festival Catering', path: '/menu' },
+        { name: 'Sides & Extras', path: '/menu' },
+        { name: 'Packages & Pricing', path: '/menu' },
+      ],
+    },
+    {
+      name: 'Services',
+      path: '/services/wedding',
+      dropdown: [
+        { name: 'Wedding Catering', path: '/services/wedding' },
+        { name: 'Corporate Events', path: '/services/corporate' },
+        { name: 'Private Parties', path: '/services/parties' },
+        { name: 'Festival & Outdoor', path: '/services/festival' },
+        { name: 'Live Grill Stations', path: '/services/live-grill' },
+        { name: 'Nationwide Delivery', path: '/services/delivery' },
       ],
     },
     { name: 'Events', path: '/events' },
@@ -155,11 +166,10 @@ const Header: React.FC = () => {
 
   return (
     <header
-      className="w-full z-[150] fixed top-0 left-0 bg-slate-100 border-b border-slate-200 font-google-sans"
+      className="w-full z-[150] fixed top-0 left-0 bg-white border-b border-stone-200 font-google-sans"
       style={{
-        ['--color-krb-purple' as string]: '#3d1d4d',
-        ['--color-krb-blue' as string]: '#0088cc',
-        ['--color-krb-yellow' as string]: '#f5b800',
+        ['--color-mg-yellow' as string]: '#f5c800',
+        ['--color-mg-red' as string]: '#c8102e',
       }}
     >
       {/* Desktop top row */}
@@ -174,17 +184,17 @@ const Header: React.FC = () => {
             </div>
           </Link>
 
-          <div className="flex flex-col items-end gap-1 text-[10px] font-bold text-krb-purple tracking-wide">
+            <div className="flex flex-col items-end gap-1 text-[10px] font-bold text-stone-700 tracking-wide">
             <div className="flex items-center gap-4">
               <Link
                 to="/about"
-                className="px-2.5 py-1.5 rounded-md transition-colors flex items-center gap-1 hover:bg-[#59b947] hover:text-white active:bg-[#59b947] active:text-white"
+                className="px-2.5 py-1.5 rounded-md transition-colors flex items-center gap-1 text-stone-700 hover:bg-stone-900 hover:text-[#f5c800] active:bg-stone-900 active:text-[#f5c800]"
               >
                 About us <ChevronDown size={12} />
               </Link>
               <button
                 type="button"
-                className={`px-2.5 py-1.5 rounded-md transition-colors flex items-center gap-1 ${isServicesOpen ? 'bg-[#59b947] text-white' : 'hover:bg-[#59b947] hover:text-white active:bg-[#59b947] active:text-white'}`}
+                className={`px-2.5 py-1.5 rounded-md transition-colors flex items-center gap-1 ${isServicesOpen ? 'bg-stone-900 text-[#f5c800]' : 'text-stone-700 hover:bg-stone-900 hover:text-[#f5c800]'}`}
                 onClick={() => setIsServicesOpen((open: boolean) => !open)}
               >
                 Our menu
@@ -192,28 +202,28 @@ const Header: React.FC = () => {
               </button>
               <Link
                 to="/events"
-                className="px-2.5 py-1.5 rounded-md transition-colors flex items-center gap-1 hover:bg-[#59b947] hover:text-white active:bg-[#59b947] active:text-white"
+                className="px-2.5 py-1.5 rounded-md transition-colors flex items-center gap-1 text-stone-700 hover:bg-stone-900 hover:text-[#f5c800] active:bg-stone-900 active:text-[#f5c800]"
               >
                 Events <ChevronDown size={12} />
               </Link>
               <Link
                 to="/contact"
-                className="px-2.5 py-1.5 rounded-md transition-colors flex items-center gap-1 hover:bg-[#59b947] hover:text-white active:bg-[#59b947] active:text-white"
+                className="px-2.5 py-1.5 rounded-md transition-colors flex items-center gap-1 text-stone-700 hover:bg-stone-900 hover:text-[#f5c800] active:bg-stone-900 active:text-[#f5c800]"
               >
                 Contact us <ChevronDown size={12} />
               </Link>
             </div>
             <div className="flex items-center gap-3 px-2.5">
-              <a href="tel:+440000000000" className="hover:text-krb-blue transition-colors">+44 0000 000 000</a>
-              <span className="text-slate-300">|</span>
-              <a href="mailto:hello@millzgrill.co.uk" className="hover:text-krb-blue transition-colors">hello@millzgrill.co.uk</a>
+              <a href="tel:+440000000000" className="hover:text-[#f5c800] transition-colors">+44 0000 000 000</a>
+              <span className="text-stone-300">|</span>
+              <a href="mailto:hello@millzgrill.co.uk" className="hover:text-[#f5c800] transition-colors">hello@millzgrill.co.uk</a>
             </div>
           </div>
         </div>
       </div>
 
       {/* Desktop nav row */}
-      <div className={`hidden lg:block bg-slate-50 transition-all duration-300 ${scrolled ? 'max-h-0 opacity-0 overflow-hidden' : 'max-h-24 opacity-100 overflow-visible'}`}>
+      <div className={`hidden lg:block bg-white transition-all duration-300 ${scrolled ? 'max-h-0 opacity-0 overflow-hidden' : 'max-h-24 opacity-100 overflow-visible'}`}>
         <div className="max-w-7xl mx-auto px-6 h-[68px] flex items-center justify-between gap-8">
           <nav className="flex items-center gap-2">
             {navLinks.map((link) => (
@@ -233,8 +243,8 @@ const Header: React.FC = () => {
                   }}
                   className={`px-3.5 py-2 rounded-lg text-[15px] font-bold tracking-wide transition-colors flex items-center gap-1.5 ${
                     link.dropdown && isServicesOpen
-                      ? 'bg-[#59b947] text-white'
-                      : 'text-krb-purple/90 hover:bg-[#59b947] hover:text-white active:bg-[#59b947] active:text-white'
+                      ? 'bg-stone-900 text-[#f5c800]'
+                      : 'text-stone-800 hover:bg-stone-900 hover:text-[#f5c800] active:bg-stone-900 active:text-[#f5c800]'
                   }`}
                 >
                   {link.name}
@@ -263,8 +273,8 @@ const Header: React.FC = () => {
                                   type="button"
                                   className={`w-full px-4 py-3 rounded-xl text-[13px] font-semibold transition-all flex items-center justify-between ${
                                     isCleaningOpen
-                                      ? 'bg-[#59b947] text-white'
-                                      : 'text-slate-600 hover:bg-[#59b947] hover:text-white active:bg-[#59b947] active:text-white'
+                                      ? 'bg-stone-900 text-[#f5c800]'
+                                      : 'text-stone-700 hover:bg-stone-900 hover:text-[#f5c800] active:bg-stone-900 active:text-[#f5c800]'
                                   }`}
                                   onClick={() => setIsCleaningOpen((open) => !open)}
                                 >
@@ -286,7 +296,7 @@ const Header: React.FC = () => {
                                             <Link
                                               key={child.name}
                                               to={child.path}
-                                              className="w-full px-4 py-3 rounded-xl text-[13px] font-semibold transition-all flex items-center justify-between group/sub text-slate-600 hover:bg-[#59b947] hover:text-white active:bg-[#59b947] active:text-white"
+                                              className="w-full px-4 py-3 rounded-xl text-[13px] font-semibold transition-all flex items-center justify-between group/sub text-stone-700 hover:bg-stone-900 hover:text-[#f5c800] active:bg-stone-900 active:text-[#f5c800]"
                                             >
                                               {child.name}
                                               <ChevronRight size={14} className="opacity-0 -translate-x-2 group-hover/sub:opacity-100 group-hover/sub:translate-x-0 transition-all" />
@@ -302,7 +312,7 @@ const Header: React.FC = () => {
                               <Link
                                 key={sub.name}
                                 to={sub.path || '/services'}
-                                className="px-4 py-3 rounded-xl text-[13px] font-semibold transition-all flex items-center justify-between group/sub text-slate-600 hover:bg-[#59b947] hover:text-white active:bg-[#59b947] active:text-white"
+                                className="px-4 py-3 rounded-xl text-[13px] font-semibold transition-all flex items-center justify-between group/sub text-stone-700 hover:bg-stone-900 hover:text-[#f5c800] active:bg-stone-900 active:text-[#f5c800]"
                               >
                                 {sub.name}
                                 <ChevronRight size={14} className="opacity-0 -translate-x-2 group-hover/sub:opacity-100 group-hover/sub:translate-x-0 transition-all" />
@@ -361,7 +371,7 @@ const Header: React.FC = () => {
             </div>
             <Link
               to="/contact"
-              className="px-4 h-11 rounded-lg bg-krb-purple text-white text-xs font-bold tracking-wide hover:bg-krb-blue transition-colors inline-flex items-center gap-2"
+              className="px-4 h-11 rounded-lg bg-stone-900 text-[#f5c800] text-xs font-bold tracking-wide hover:bg-black transition-colors inline-flex items-center gap-2"
             >
               Book Now
               <ArrowRight size={14} />
@@ -385,7 +395,7 @@ const Header: React.FC = () => {
           <button
             type="button"
             onClick={handleCompactMenuClick}
-            className="h-8 px-4 border border-krb-purple text-krb-purple text-[11px] font-black uppercase tracking-[0.16em] inline-flex items-center gap-1 hover:bg-krb-purple hover:text-white transition-colors"
+            className="h-8 px-4 border border-stone-800 text-stone-800 text-[11px] font-black uppercase tracking-[0.16em] inline-flex items-center gap-1 hover:bg-stone-900 hover:text-[#f5c800] transition-colors"
           >
             Menu
             <ChevronUp size={12} />
@@ -398,7 +408,7 @@ const Header: React.FC = () => {
         initial={{ opacity: 0, y: -8 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.35, ease: 'easeOut' }}
-        className="lg:hidden bg-white border-b border-slate-200"
+        className="lg:hidden bg-white border-b border-stone-200"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex justify-between items-center gap-3">
           <Link to="/" className="flex items-center">
@@ -413,14 +423,14 @@ const Header: React.FC = () => {
           <div className="flex items-center gap-2">
             <button
               type="button"
-              className="w-11 h-11 flex items-center justify-center rounded-xl text-krb-purple bg-white transition-all duration-300 active:scale-95"
+              className="w-11 h-11 flex items-center justify-center rounded-xl text-stone-700 bg-white transition-all duration-300 active:scale-95"
               aria-label="Accessibility"
             >
               <Accessibility size={22} />
             </button>
             <button
               type="button"
-              className="w-11 h-11 flex items-center justify-center rounded-xl text-krb-purple bg-white transition-all duration-300 active:scale-95"
+              className="w-11 h-11 flex items-center justify-center rounded-xl text-stone-700 bg-white transition-all duration-300 active:scale-95"
               aria-label="Search services"
               onClick={() => {
                 setIsSearchOpen(true);
@@ -431,7 +441,7 @@ const Header: React.FC = () => {
             </button>
             <button
               type="button"
-              className="w-11 h-11 flex items-center justify-center rounded-xl text-krb-purple bg-white transition-all duration-300 active:scale-95"
+              className="w-11 h-11 flex items-center justify-center rounded-xl text-stone-700 bg-white transition-all duration-300 active:scale-95"
               onClick={() => setIsMenuOpen((open) => !open)}
               aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
             >
@@ -449,7 +459,7 @@ const Header: React.FC = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="fixed inset-0 z-[250] bg-[#003a70] lg:hidden flex flex-col"
+            className="fixed inset-0 z-[250] bg-[#0a0a0a] lg:hidden flex flex-col"
           >
             <div className="flex items-center gap-3 px-4 py-4 border-b border-white/15">
               <Search size={20} className="text-white/60 shrink-0" />
@@ -517,7 +527,7 @@ const Header: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -12 }}
             transition={{ duration: 0.25, ease: 'easeOut' }}
-            className="fixed inset-x-0 top-[74px] bottom-0 z-[200] bg-[#003a70] lg:hidden overflow-y-auto"
+            className="fixed inset-x-0 top-[74px] bottom-0 z-[200] bg-[#0a0a0a] lg:hidden overflow-y-auto"
           >
             <div>
               {navLinks.map((link, i) => (
@@ -547,7 +557,7 @@ const Header: React.FC = () => {
                             initial={{ opacity: 0, height: 0 }}
                             animate={{ opacity: 1, height: 'auto' }}
                             exit={{ opacity: 0, height: 0 }}
-                            className="overflow-hidden bg-[#002a55]"
+                            className="overflow-hidden bg-[#111]"
                           >
                             {link.dropdown.map((sub) => (
                               sub.children ? (
@@ -569,7 +579,7 @@ const Header: React.FC = () => {
                                         initial={{ opacity: 0, height: 0 }}
                                         animate={{ opacity: 1, height: 'auto' }}
                                         exit={{ opacity: 0, height: 0 }}
-                                        className="overflow-hidden bg-[#001f42]"
+                                        className="overflow-hidden bg-[#1a1a1a]"
                                       >
                                         {sub.children.map((child) => (
                                           <Link

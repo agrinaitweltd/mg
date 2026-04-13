@@ -7,6 +7,12 @@ const pageLoaders = {
   events: () => import("/pages/events.js"),
   gallery: () => import("/pages/gallery.js"),
   contact: () => import("/pages/contact.js"),
+  wedding: () => import("/pages/wedding.js"),
+  corporate: () => import("/pages/corporate.js"),
+  parties: () => import("/pages/parties.js"),
+  festival: () => import("/pages/festival.js"),
+  'live-grill': () => import("/pages/live-grill.js"),
+  delivery: () => import("/pages/delivery.js"),
 };
 
 const pathMap = {
@@ -21,6 +27,18 @@ const pathMap = {
   '/gallery/': 'gallery',
   '/contact': 'contact',
   '/contact/': 'contact',
+  '/services/wedding': 'wedding',
+  '/services/wedding/': 'wedding',
+  '/services/corporate': 'corporate',
+  '/services/corporate/': 'corporate',
+  '/services/parties': 'parties',
+  '/services/parties/': 'parties',
+  '/services/festival': 'festival',
+  '/services/festival/': 'festival',
+  '/services/live-grill': 'live-grill',
+  '/services/live-grill/': 'live-grill',
+  '/services/delivery': 'delivery',
+  '/services/delivery/': 'delivery',
 };
 
 async function bootstrap() {
