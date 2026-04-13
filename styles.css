@@ -882,7 +882,7 @@ p{margin:0 0 1em}
 .footer-body{padding:4rem 0 2.5rem}
 .footer-grid{display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:3rem;padding-bottom:2.5rem;border-bottom:1px solid rgba(255,255,255,.07)}
 .footer-brand__tagline{font-size:.87rem;margin:.85rem 0 1.5rem;max-width:270px;color:rgba(255,255,255,.45);line-height:1.75}
-.footer-logo{width:72px;height:auto;object-fit:contain;display:block;filter:brightness(1.1) drop-shadow(0 2px 16px rgba(245,200,0,.2))}
+.footer-logo{width:72px;height:auto;object-fit:contain;display:block;filter:brightness(0) invert(1) drop-shadow(0 2px 12px rgba(245,200,0,.2))}
 .footer-brand__cta{display:inline-flex;align-items:center;gap:.5rem;background:var(--accent);color:var(--ink);font-family:"Montserrat",sans-serif;font-size:.78rem;font-weight:700;letter-spacing:.04em;padding:.55rem 1.25rem;border-radius:999px;text-decoration:none;transition:background var(--transition),transform var(--transition)}
 .footer-brand__cta:hover{background:var(--accent-dark);transform:translateY(-2px)}
 
