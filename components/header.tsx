@@ -453,7 +453,7 @@ const Header: React.FC = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="fixed inset-0 z-[250] bg-[#0a0a0a] lg:hidden flex flex-col"
+            className="fixed inset-0 z-[250] bg-[#0a0a0a] text-white lg:hidden flex flex-col"
           >
             <div className="flex items-center gap-3 px-4 py-4 border-b border-white/15">
               <Search size={20} className="text-white/60 shrink-0" />
@@ -524,7 +524,7 @@ const Header: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -12 }}
             transition={{ duration: 0.25, ease: 'easeOut' }}
-            className="fixed inset-x-0 top-[74px] bottom-0 z-[200] bg-[#0a0a0a] lg:hidden overflow-y-auto"
+            className="fixed inset-x-0 top-[74px] bottom-0 z-[200] bg-[#0a0a0a] text-white lg:hidden overflow-y-auto"
           >
             <div>
               {navLinks.map((link, i) => (
