@@ -8,9 +8,7 @@ function renderFooter() {
       <div class="container">
         <div class="footer-grid">
           <div class="footer-brand">
-            <div class="footer-logo-wrap">
-              <img src="/logo.png" alt="Millz Grill Ltd" class="footer-logo" />
-            </div>
+            <img src="/logo.png" alt="Millz Grill Ltd" class="footer-logo" />
             <p class="footer-brand__tagline">Premium Jamaican &amp; Ugandan catering for weddings, corporate events and private parties across the UK.</p>
             <a href="/contact" class="footer-brand__cta">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:14px;height:14px"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg>
