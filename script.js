@@ -35,10 +35,19 @@ if (loadingScreen) {
   if (alreadyVisited) {
     // Skip animation on subsequent page navigations within the session
     loadingScreen.style.display = 'none';
-  } else if (document.readyState === "complete") {
-    setTimeout(dismiss, 200);
   } else {
-    window.addEventListener("load", () => setTimeout(dismiss, 250));
+    // First visit — wait for page load then enforce a minimum 2s display
+    const startTime = Date.now();
+    const dismissAfterMin = () => {
+      const elapsed = Date.now() - startTime;
+      const remaining = Math.max(0, 2000 - elapsed);
+      setTimeout(dismiss, remaining);
+    };
+    if (document.readyState === "complete") {
+      dismissAfterMin();
+    } else {
+      window.addEventListener("load", dismissAfterMin);
+    }
   }
 }
 
