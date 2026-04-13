@@ -82,52 +82,35 @@ function a(e){e.innerHTML=`
         <div class="team-grid">
           <article class="team-card reveal">
             <div class="team-card__img-wrap">
-              <img src="/team-millz.png" onerror="if(this.src!=='https://images.unsplash.com/photo-1607631568010-a87245c0daf8?w=600&q=80&auto=format&fit=crop')this.src='https://images.unsplash.com/photo-1607631568010-a87245c0daf8?w=600&q=80&auto=format&fit=crop'" alt="Millz - Head Chef" />
+              <img src="/team-moses.png" onerror="if(this.src!=='https://images.unsplash.com/photo-1607631568010-a87245c0daf8?w=600&q=80&auto=format&fit=crop')this.src='https://images.unsplash.com/photo-1607631568010-a87245c0daf8?w=600&q=80&auto=format&fit=crop'" alt="Moses Kasibante - Co-Founder" />
               <div class="team-card__overlay">
                 <div class="team-card__overlay-info">
-                  <p class="team-card__role-label">Head Chef</p>
-                  <p class="team-card__name">Millz</p>
+                  <p class="team-card__role-label">Co-Founder</p>
+                  <p class="team-card__name">Moses Kasibante</p>
                 </div>
               </div>
             </div>
             <div class="team-card__body">
-              <p class="team-card__role">Head Chef &amp; Founder</p>
-              <h3>Millz</h3>
-              <p>Menu design, quality control, and kitchen leadership. Over 15 years of culinary experience spanning Jamaica and Uganda.</p>
+              <p class="team-card__role">Co-Founder</p>
+              <h3>Moses Kasibante</h3>
+              <p>The creative force behind the kitchen. Moses brings over a decade of culinary expertise rooted in Jamaican and Ugandan food traditions, leading every event with passion and precision.</p>
               <div class="team-card__accent"></div>
             </div>
           </article>
           <article class="team-card reveal">
             <div class="team-card__img-wrap">
-              <img src="/team-sophia.png" onerror="if(this.src!=='https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=600&q=80&auto=format&fit=crop')this.src='https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=600&q=80&auto=format&fit=crop'" alt="Sophia - Operations Manager" />
+              <img src="/team-jamillah.png" onerror="if(this.src!=='https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80&auto=format&fit=crop')this.src='https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80&auto=format&fit=crop'" alt="Jamillah Kasibante - Co-Founder" />
               <div class="team-card__overlay">
                 <div class="team-card__overlay-info">
-                  <p class="team-card__role-label">Operations</p>
-                  <p class="team-card__name">Sophia</p>
+                  <p class="team-card__role-label">Co-Founder</p>
+                  <p class="team-card__name">Jamillah Kasibante</p>
                 </div>
               </div>
             </div>
             <div class="team-card__body">
-              <p class="team-card__role">Operations Manager</p>
-              <h3>Sophia</h3>
-              <p>Logistics, staffing, and event delivery planning. Ensures every booking runs without a hitch from brief to breakdown.</p>
-              <div class="team-card__accent"></div>
-            </div>
-          </article>
-          <article class="team-card reveal">
-            <div class="team-card__img-wrap">
-              <img src="/team-theo.png" onerror="if(this.src!=='https://images.unsplash.com/photo-1556157382-97eda2d62296?w=600&q=80&auto=format&fit=crop')this.src='https://images.unsplash.com/photo-1556157382-97eda2d62296?w=600&q=80&auto=format&fit=crop'" alt="Theo - Service Lead" />
-              <div class="team-card__overlay">
-                <div class="team-card__overlay-info">
-                  <p class="team-card__role-label">Service Lead</p>
-                  <p class="team-card__name">Theo</p>
-                </div>
-              </div>
-            </div>
-            <div class="team-card__body">
-              <p class="team-card__role">Service Lead</p>
-              <h3>Theo</h3>
-              <p>Front-of-house coordination and guest experience. Manages day-of service to deliver a seamless, polished event.</p>
+              <p class="team-card__role">Co-Founder</p>
+              <h3>Jamillah Kasibante</h3>
+              <p>The operational heart of Millz Grill. Jamillah oversees client relationships, logistics, and event delivery — ensuring every booking is seamless from first enquiry to final plate.</p>
               <div class="team-card__accent"></div>
             </div>
           </article>

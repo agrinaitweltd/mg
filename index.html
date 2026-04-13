@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/styles.css" />
+  <link rel="icon" type="image/png" href="/logo.png" />
 </head>
 <body data-page="home">
   <div id="loading-screen" aria-hidden="true" aria-label="Loading Millz Grill">
@@ -21,6 +22,17 @@
   <div id="header-root"></div>
   <main id="main-content"></main>
   <div id="footer-root"></div>
+
+  <div id="cookie-banner" class="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite">
+    <div class="cookie-banner__inner">
+      <p class="cookie-banner__text">We use cookies to improve your experience on our site. By continuing, you agree to our use of cookies.</p>
+      <div class="cookie-banner__actions">
+        <button id="cookie-accept" class="btn cookie-banner__accept">Accept</button>
+        <button id="cookie-decline" class="btn cookie-banner__decline">Decline</button>
+      </div>
+    </div>
+  </div>
+
   <script type="module" src="/app.js"></script>
 </body>
 </html>

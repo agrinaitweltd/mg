@@ -7,6 +7,23 @@
 const yearEl = document.getElementById("year");
 if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 
+/* --- Cookie Banner ---------------------------------------- */
+const cookieBanner = document.getElementById('cookie-banner');
+if (cookieBanner) {
+  const cookieChoice = localStorage.getItem('mg_cookies');
+  if (!cookieChoice) {
+    setTimeout(() => cookieBanner.classList.add('cookie-banner--visible'), 1200);
+  }
+  document.getElementById('cookie-accept')?.addEventListener('click', () => {
+    localStorage.setItem('mg_cookies', 'accepted');
+    cookieBanner.classList.remove('cookie-banner--visible');
+  });
+  document.getElementById('cookie-decline')?.addEventListener('click', () => {
+    localStorage.setItem('mg_cookies', 'declined');
+    cookieBanner.classList.remove('cookie-banner--visible');
+  });
+}
+
 /* --- Loading Screen ---------------------------------------- */
 const loadingScreen = document.getElementById("loading-screen");
 if (loadingScreen) {
@@ -65,6 +82,14 @@ const revealObs = new IntersectionObserver(
   { threshold: 0.08, rootMargin: '0px 0px -40px 0px' }
 );
 document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale').forEach((el) => revealObs.observe(el));
+
+/* Additional mobile card classes observed for animate-in */
+const MOBILE_CARD_CLASSES = ['spotlight-card','menu-card','team-card','price-card','cater-card','event-type-card','service-card','section-head'];
+if (window.innerWidth <= 768) {
+  document.querySelectorAll(MOBILE_CARD_CLASSES.map(c => '.' + c).join(',')).forEach((el, i) => {
+    revealObs.observe(el);
+  });
+}
 
 /* --- Parallax on scroll ------------------------------------ */
 const parallaxEls = document.querySelectorAll("[data-parallax]");

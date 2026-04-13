@@ -15,9 +15,15 @@ function renderFooter() {
               Get a Free Quote
             </a>
             <div class="social-row">
-              <a href="#" aria-label="Instagram">Ig</a>
-              <a href="#" aria-label="Facebook">Fb</a>
-              <a href="#" aria-label="TikTok">Tk</a>
+              <a href="https://instagram.com" aria-label="Instagram" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6" fill="currentColor" stroke="none"/></svg>
+              </a>
+              <a href="https://facebook.com" aria-label="Facebook" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+              </a>
+              <a href="https://tiktok.com" aria-label="TikTok" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34l.04-8.04a8.17 8.17 0 004.84 1.57V5.4a4.85 4.85 0 01-1.11-.71z"/></svg>
+              </a>
             </div>
           </div>
           <nav class="footer-col" aria-label="Footer navigation">

@@ -10,11 +10,12 @@ function r(e){function a(n,i,c){return`<img src="${n}" alt="${c}" onerror="if(th
       </div>
     </section>
 
+    <div class="menu-sticky-zone">
     <section class="menu-filter" aria-label="Filter menu">
-      <button class="menu-filter__btn" data-filter="all">All Dishes</button>
+      <button class="menu-filter__btn active" data-filter="all">All Dishes</button>
       <button class="menu-filter__btn" data-filter="jamaican">Jamaican</button>
       <button class="menu-filter__btn" data-filter="ugandan">Ugandan</button>
-      <button class="menu-filter__btn" data-filter="sides">Sides</button>
+      <button class="menu-filter__btn" data-filter="sides">Sides ★</button>
       <button class="menu-filter__btn" data-filter="packages">Packages</button>
     </section>
 
@@ -101,6 +102,7 @@ function r(e){function a(n,i,c){return`<img src="${n}" alt="${c}" onerror="if(th
         </div>
       </div>
     </section>
+    </div>
 
     <section class="cta-band" aria-label="Menu CTA">
       <div class="container cta-band__inner reveal">
