@@ -4,11 +4,11 @@ export function renderPage(main) {
       <div class="container page-banner__inner">
         <p class="label">About Us</p>
         <h1>Our Story, Mission &amp; Team</h1>
-        <p class="page-banner__sub">Built from Caribbean and Ugandan heritage, refined for modern events across the UK.</p>
+        <p class="page-banner__sub">Built from Caribbean and Ugandan heritage, refined for modern events across England, Senegal and Uganda.</p>
         <div class="page-banner__stats">
           <div class="pb-stat"><strong>500+</strong><span>Events Catered</span></div>
           <div class="pb-stat"><strong>12+</strong><span>Years Experience</span></div>
-          <div class="pb-stat"><strong>UK-Wide</strong><span>Coverage</span></div>
+          <div class="pb-stat"><strong>3 Countries</strong><span>Coverage</span></div>
         </div>
       </div>
     </section>
@@ -21,7 +21,7 @@ export function renderPage(main) {
             <p class="label">Our Story</p>
             <h2>From South London pop-ups to premium events</h2>
             <p>Millz Grill started in South London with family recipes and a single goal: serve unforgettable food with genuine hospitality. What began as weekend pop-ups quickly grew into a full catering operation.</p>
-            <p>Today we cater weddings, private events, and corporate functions across the UK, blending authentic Jamaican and Ugandan cooking with modern presentation and professional service.</p>
+            <p>Today we cater weddings, private events, and corporate functions across England, Senegal and Uganda, blending authentic Jamaican and Ugandan cooking with modern presentation and professional service.</p>
             <ul class="check-list">
               <li>Family recipes spanning two generations</li>
               <li>Trained, uniformed service team</li>
@@ -67,7 +67,7 @@ export function renderPage(main) {
           <div class="v-timeline__item reveal"><div class="v-timeline__dot"></div><div class="v-timeline__card"><h3>2012 — The Beginning</h3><p>First pop-up events in South London serving Jamaican street food to local communities.</p></div></div>
           <div class="v-timeline__item v-timeline__item--right reveal"><div class="v-timeline__dot"></div><div class="v-timeline__card"><h3>2015 — First Weddings</h3><p>Catering expanded into formal weddings and private functions with a full service team.</p></div></div>
           <div class="v-timeline__item reveal"><div class="v-timeline__dot"></div><div class="v-timeline__card"><h3>2018 — Ugandan Menu Launch</h3><p>Introduced authentic Ugandan cuisine, broadening the offering to include East African specialities.</p></div></div>
-          <div class="v-timeline__item v-timeline__item--right reveal"><div class="v-timeline__dot"></div><div class="v-timeline__card"><h3>2021 — UK-Wide Expansion</h3><p>Began taking bookings outside London, reaching Manchester, Birmingham, Bristol, and beyond.</p></div></div>
+          <div class="v-timeline__item v-timeline__item--right reveal"><div class="v-timeline__dot"></div><div class="v-timeline__card"><h3>2021 — International Expansion</h3><p>Expanded operations into Senegal and Uganda, bringing the Millz Grill experience to West and East Africa.</p></div></div>
           <div class="v-timeline__item reveal"><div class="v-timeline__dot"></div><div class="v-timeline__card"><h3>2024 — 500+ Events Milestone</h3><p>Reached over 500 successful events and launched live grill station packages for festivals.</p></div></div>
         </div>
       </div>

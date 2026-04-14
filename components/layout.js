@@ -9,7 +9,7 @@ function renderFooter() {
         <div class="footer-grid">
           <div class="footer-brand">
             <img src="/logo.png" alt="Millz Grill Ltd" class="footer-logo" />
-            <p class="footer-brand__tagline">Premium Jamaican &amp; Ugandan catering for weddings, corporate events and private parties across the UK.</p>
+            <p class="footer-brand__tagline">Premium Jamaican &amp; Ugandan catering for weddings, corporate events and private parties across England, Senegal and Uganda.</p>
             <a href="/contact" class="footer-brand__cta">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:14px;height:14px"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg>
               Get a Free Quote
@@ -62,7 +62,7 @@ function renderFooter() {
             </div>
             <div class="footer-contact-item">
               <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              <span>London, UK &mdash; Nationwide</span>
+              <span>England &bull; Senegal &bull; Uganda</span>
             </div>
           </div>
         </div>

@@ -48,7 +48,7 @@ function s(e){e.innerHTML=`
           </div>
           <div class="contact-split__detail">
             <svg class="contact-split__icon" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <div><h3>Location</h3><p>London, UK</p><small>We travel nationwide for events</small></div>
+            <div><h3>Location</h3><p>England &bull; Senegal &bull; Uganda</p><small>We travel across all three countries</small></div>
           </div>
           <hr class="contact-split__rule" />
           <div class="contact-split__social">
@@ -87,7 +87,7 @@ function s(e){e.innerHTML=`
           <details class="faq reveal"><summary>How far in advance should I book?</summary><p>We recommend booking at least 8–12 weeks ahead for weddings and large events. For smaller bookings, 4 weeks is usually sufficient, though we do take last-minute enquiries subject to availability.</p></details>
           <details class="faq reveal"><summary>Do you cater for dietary requirements?</summary><p>Yes — all our menus can be adapted for vegan, vegetarian, gluten-free, halal, and other dietary requirements. We provide full allergen information for every dish served.</p></details>
           <details class="faq reveal"><summary>What is your minimum guest count?</summary><p>Our minimum is 20 guests for buffet bookings. Plated service and live grill packages start from 50 guests. Contact us to discuss smaller events.</p></details>
-          <details class="faq reveal"><summary>Do you travel outside London?</summary><p>Yes — we cater events across the UK, including Birmingham, Manchester, Bristol, Leeds, and Edinburgh. Travel costs may apply for distance bookings.</p></details>
+          <details class="faq reveal"><summary>Which countries do you operate in?</summary><p>We offer our full catering service across England, Senegal and Uganda. Whether you're planning an event in London, Dakar or Kampala, get in touch and we'll confirm availability and logistics.</p></details>
           <details class="faq reveal"><summary>Is a deposit required to confirm a booking?</summary><p>Yes, a 25% deposit is required to secure your date. The remaining balance is due 14 days before the event.</p></details>
         </div>
       </div>

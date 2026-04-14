@@ -4,7 +4,7 @@ export function renderPage(main) {
       <div class="container page-banner__inner">
         <p class="label">Services</p>
         <h1>Corporate Events</h1>
-        <p class="page-banner__sub">Professional catering for corporate dinners, product launches, team events, and client entertainment across the UK.</p>
+        <p class="page-banner__sub">Professional catering for corporate dinners, product launches, team events, and client entertainment across England, Senegal and Uganda.</p>
         <div class="page-banner__actions">
           <a href="/contact" class="btn btn--fill">Request a Quote</a>
           <a href="/menu" class="btn btn--outline-light">View Menu</a>

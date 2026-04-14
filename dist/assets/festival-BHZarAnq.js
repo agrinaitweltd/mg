@@ -3,7 +3,7 @@ function a(e){e.innerHTML=`
       <div class="container page-banner__inner">
         <p class="label">Services</p>
         <h1>Festival &amp; Outdoor Catering</h1>
-        <p class="page-banner__sub">High-volume, high-energy catering for festivals, outdoor events, markets, and street food activations across the UK.</p>
+        <p class="page-banner__sub">High-volume, high-energy catering for festivals, outdoor events, markets, and street food activations across England, Senegal and Uganda.</p>
         <div class="page-banner__actions">
           <a href="/contact" class="btn btn--fill">Request a Quote</a>
           <a href="/menu" class="btn btn--outline-light">View Menu</a>
